@@ -19,7 +19,7 @@ type feedbackResult struct {
 }
 
 var vehicleResult map[string]feedbackResult
-var inventory vehicle
+var inventory []vehicle
 
 type rating float32
 
@@ -39,9 +39,8 @@ type truck struct {
 }
 
 type bike struct {
-	model       string
-	make        string
-	typeVehicle string
+	model string
+	make  string
 }
 
 const (
@@ -53,7 +52,7 @@ const (
 )
 
 func init() {
-	
+
 	inventory = []vehicle{
 		bike{"FTR 1200", "Indian"},
 		bike{"Iron 1200", "Harley"},
@@ -65,9 +64,9 @@ func init() {
 		car{"CRV", "Honda", "SUV"},
 		car{"Camry", "Toyota", "Sedan"},
 		truck{"F-150", "Ford", "Truck"},
-		truck{"RAM1500", "Dodge", "Truck"}
+		truck{"RAM1500", "Dodge", "Truck"},
 	}
-	
+
 	vehicleResult = make(map[string]feedbackResult)
 }
 
