@@ -1,8 +1,12 @@
 package main
 
 // Values array for the feedback.json file
+type Values struct {
+}
 
 // Model array for the feedback.json file
+type Model struct {
+}
 
 type rating float32
 
